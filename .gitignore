@@ -1,0 +1,32 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore all venv folders at any level
+venv/
+**/venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS, Windows junk
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Environment files
+.env
+**/.env
+
+# Logs
+*.log
+
+# Coverage/test
+htmlcov/
+*.cover
+.coverage
+.cache
