@@ -4,16 +4,19 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-token = os.getenv("TOKEN")
+TOKEN = os.getenv("TOKEN")
+USERNAME = "hyounkyu"
 
 pixela_endpoint = "https://pixe.la/v1/users"
 
 user_params = {
-    "token": token,
-    "username": "hyounkyu",
+    "token": TOKEN,
+    "username": USERNAME,
     "agreeTermsOfService": "yes",
     "notMinor": "yes"
 }
 
-response = requests.post(url=pixela_endpoint, json=user_params)
-print(response.text)
+# response = requests.post(url=pixela_endpoint, json=user_params)
+# print(response.text)
+
+graph_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs"
