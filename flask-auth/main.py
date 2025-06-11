@@ -14,6 +14,11 @@ login_manager.login_view = "login"  # 로그인 안 된 상태로 보호된 경�
 login_manager.init_app(app)
 
 
+@app.context_processor
+def inject_user():
+    return dict(logged_in=current_user.is_authenticated)
+
+
 @login_manager.user_loader
 def load_user(user_id):
     return db.session.get(User, int(user_id))
