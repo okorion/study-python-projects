@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 # Ignore all venv folders at any level
+.venv/
 venv/
 **/venv/
 
